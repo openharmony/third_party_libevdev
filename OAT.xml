@@ -69,6 +69,16 @@ Note:If the text contains special characters, please escape them according to th
                 <filteritem type="filename" name="README.OpenSource"/>
                 <filteritem type="filename" name="README"/>
                 <filteritem type="filename" name="COPYING" desc="未使用"/>
+                <filteritem type="filename" name="libevdev/libevdev.c" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev.h" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev.sym" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev-int.h" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="export_include/libevdev/libevdev.h" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev-names.c" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev-uinput-int.h" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev-uinput.c" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev-uinput.h" desc="该文件使用的是MIT协议"/>
+                <filteritem type="filename" name="libevdev/libevdev-util.h" desc="该文件使用的是MIT协议"/>
                 <filteritem type="filepath" name="build-aux/.*" desc="未使用"/>
                 <filteritem type="filepath" name="doc/.*" desc="未使用"/>
                 <filteritem type="filepath" name="m4/.*" desc="未使用"/>
