@@ -485,7 +485,11 @@ libevdev_uinput_write_event(const struct libevdev_uinput *uinput_dev,
 			    unsigned int code,
 			    int value)
 {
+#ifndef __MUSL__
 	struct input_event ev = { {0,0}, type, code, value };
+#else
+	struct input_event ev = { type, code, value };
+#endif
 	int fd = libevdev_uinput_get_fd(uinput_dev);
 	int rc, max;
 
