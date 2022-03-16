@@ -45,6 +45,6 @@ ohos_shared_library("libevdev") {
   public_deps = [
   ]
 
-  part_name = "multimodalinput_base"
+  part_name = "input"
 }
 ## Build libevdev.so }}}
