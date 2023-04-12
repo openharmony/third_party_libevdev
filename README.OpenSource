@@ -3,8 +3,8 @@
    "Name":"libevdev",
    "License":"MIT License",
    "License File":"COPYING",
-   "Version Number":"1.10",
-   "Owner":"pengfei.hou@huawei.com",
+   "Version Number":"1.12.1",
+   "Owner":"gaoshangqi1@huawei.com",
    "Upstream URL":"https://github.com/freedesktop/libevdev",
    "Description": "libevdev is a wrapper library for evdev devices. it moves the common tasks when dealing with evdev devices into a library and provides a library interface to the callers, thus avoiding erroneous ioctls, et"
   }
