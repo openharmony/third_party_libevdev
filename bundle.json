@@ -14,7 +14,7 @@
         "en": ""
     },
     "component": {
-        "name": "thirdparty_libevdev",
+        "name": "libevdev",
         "subsystem": "thirdparty",
         "syscap": [],
         "features": [],
