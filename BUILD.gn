@@ -36,6 +36,6 @@ ohos_shared_library("libevdev") {
 
   public_deps = []
 
-  part_name = "input"
+  part_name = "libevdev"
 }
 ## Build libevdev.so }}}
