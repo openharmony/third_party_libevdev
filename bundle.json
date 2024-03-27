@@ -38,7 +38,7 @@
                         "libevdev-util.h",
                         "libevdev.h"
                       ],
-                      "header_base": "//third_party/libdrm/libevdev"
+                      "header_base": "//third_party/libevdev/libevdev"
                     }
                 }
             ],
