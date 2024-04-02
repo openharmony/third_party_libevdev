@@ -27,7 +27,21 @@
         },
         "build": {
             "sub_component": [],
-            "inner_kits": [],
+            "inner_kits": [
+                {
+                    "name": "//third_party/libevdev:libevdev",
+                    "header": {
+                      "header_files": [
+                        "libevdev-int.h",
+                        "libevdev-uinput-int.h",
+                        "libevdev-uinput.h",
+                        "libevdev-util.h",
+                        "libevdev.h"
+                      ],
+                      "header_base": "//third_party/libevdev/libevdev"
+                    }
+                }
+            ],
             "test": []
         }
     }
