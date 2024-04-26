@@ -731,6 +731,7 @@ static const char * const sw_map[SW_MAX + 1] = {
     [SW_MUTE_DEVICE] = "SW_MUTE_DEVICE",
     [SW_PEN_INSERTED] = "SW_PEN_INSERTED",
     [SW_MACHINE_COVER] = "SW_MACHINE_COVER",
+    [SW_SUPER_PRIVACY] = "SW_SUPER_PRIVACY",
 };
 
 static const char * const ff_map[FF_MAX + 1] = {

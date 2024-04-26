@@ -22123,7 +22123,15 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      [KEY_BRIGHTNESS_MIN] = "KEY_BRIGHTNESS_MIN",
      [KEY_BRIGHTNESS_MAX] = "KEY_BRIGHTNESS_MAX",
      [KEY_KBDINPUTASSIST_PREV] = "KEY_KBDINPUTASSIST_PREV",
-@@ -1063,6 +1069,7 @@
+@@ -725,6 +731,7 @@
+     [SW_MUTE_DEVICE] = "SW_MUTE_DEVICE",
+     [SW_PEN_INSERTED] = "SW_PEN_INSERTED",
+     [SW_MACHINE_COVER] = "SW_MACHINE_COVER",
++    [SW_SUPER_PRIVACY] = "SW_SUPER_PRIVACY",
+ };
+ 
+ static const char * const ff_map[FF_MAX + 1] = {
+@@ -1063,6 +1070,7 @@
      { .name = "KEY_AB", .value = KEY_AB },
      { .name = "KEY_ADDRESSBOOK", .value = KEY_ADDRESSBOOK },
      { .name = "KEY_AGAIN", .value = KEY_AGAIN },
@@ -22131,7 +22139,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_ALS_TOGGLE", .value = KEY_ALS_TOGGLE },
      { .name = "KEY_ALTERASE", .value = KEY_ALTERASE },
      { .name = "KEY_ANGLE", .value = KEY_ANGLE },
-@@ -1137,7 +1144,6 @@
+@@ -1137,7 +1145,6 @@
      { .name = "KEY_CUT", .value = KEY_CUT },
      { .name = "KEY_CYCLEWINDOWS", .value = KEY_CYCLEWINDOWS },
      { .name = "KEY_D", .value = KEY_D },
@@ -22139,7 +22147,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_DATA", .value = KEY_DATA },
      { .name = "KEY_DATABASE", .value = KEY_DATABASE },
      { .name = "KEY_DELETE", .value = KEY_DELETE },
-@@ -1145,6 +1151,7 @@
+@@ -1145,6 +1152,7 @@
      { .name = "KEY_DEL_EOL", .value = KEY_DEL_EOL },
      { .name = "KEY_DEL_EOS", .value = KEY_DEL_EOS },
      { .name = "KEY_DEL_LINE", .value = KEY_DEL_LINE },
@@ -22147,7 +22155,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_DIGITS", .value = KEY_DIGITS },
      { .name = "KEY_DIRECTORY", .value = KEY_DIRECTORY },
      { .name = "KEY_DISPLAYTOGGLE", .value = KEY_DISPLAYTOGGLE },
-@@ -1160,6 +1167,7 @@
+@@ -1160,6 +1168,7 @@
      { .name = "KEY_EJECTCD", .value = KEY_EJECTCD },
      { .name = "KEY_EJECTCLOSECD", .value = KEY_EJECTCLOSECD },
      { .name = "KEY_EMAIL", .value = KEY_EMAIL },
@@ -22155,7 +22163,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_END", .value = KEY_END },
      { .name = "KEY_ENTER", .value = KEY_ENTER },
      { .name = "KEY_EPG", .value = KEY_EPG },
-@@ -1219,6 +1227,7 @@
+@@ -1219,6 +1228,7 @@
      { .name = "KEY_FN_F7", .value = KEY_FN_F7 },
      { .name = "KEY_FN_F8", .value = KEY_FN_F8 },
      { .name = "KEY_FN_F9", .value = KEY_FN_F9 },
@@ -22163,7 +22171,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_FN_S", .value = KEY_FN_S },
      { .name = "KEY_FORWARD", .value = KEY_FORWARD },
      { .name = "KEY_FORWARDMAIL", .value = KEY_FORWARDMAIL },
-@@ -1234,6 +1243,7 @@
+@@ -1234,6 +1244,7 @@
      { .name = "KEY_GREEN", .value = KEY_GREEN },
      { .name = "KEY_H", .value = KEY_H },
      { .name = "KEY_HANGEUL", .value = KEY_HANGEUL },
@@ -22171,7 +22179,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_HANJA", .value = KEY_HANJA },
      { .name = "KEY_HELP", .value = KEY_HELP },
      { .name = "KEY_HENKAN", .value = KEY_HENKAN },
-@@ -1366,6 +1376,7 @@
+@@ -1366,6 +1377,7 @@
      { .name = "KEY_NEXT", .value = KEY_NEXT },
      { .name = "KEY_NEXTSONG", .value = KEY_NEXTSONG },
      { .name = "KEY_NEXT_FAVORITE", .value = KEY_NEXT_FAVORITE },
@@ -22179,7 +22187,7 @@ diff -Naur third-party-libevdev-bak/include/event-names.h third-party-new/includ
      { .name = "KEY_NUMERIC_0", .value = KEY_NUMERIC_0 },
      { .name = "KEY_NUMERIC_1", .value = KEY_NUMERIC_1 },
      { .name = "KEY_NUMERIC_11", .value = KEY_NUMERIC_11 },
-@@ -1399,6 +1410,7 @@
+@@ -1399,6 +1411,7 @@
      { .name = "KEY_PAUSE_RECORD", .value = KEY_PAUSE_RECORD },
      { .name = "KEY_PC", .value = KEY_PC },
      { .name = "KEY_PHONE", .value = KEY_PHONE },
@@ -22240,6 +22248,18 @@ diff -Naur third-party-libevdev-bak/include/linux/linux/input-event-codes.h thir
  
  #define KEY_BRIGHTNESS_MIN		0x250	/* Set Brightness to Minimum */
  #define KEY_BRIGHTNESS_MAX		0x251	/* Set Brightness to Maximum */
+@@ -889,8 +896,9 @@
+ #define SW_MUTE_DEVICE		0x0e  /* set = device disabled */
+ #define SW_PEN_INSERTED		0x0f  /* set = pen inserted */
+ #define SW_MACHINE_COVER	0x10  /* set = cover closed */
+-#define SW_MAX			0x10
+-#define SW_CNT			(SW_MAX+1)
++#define SW_SUPER_PRIVACY	0x11  /* set = super privacy open */
++#define SW_MAX				0x11
++#define SW_CNT				(SW_MAX+1)
+ 
+ /*
+  * Misc events
 diff -Naur third-party-libevdev-bak/include/linux/linux/input.h third-party-new/include/linux/linux/input.h
 --- third-party-libevdev-bak/include/linux/linux/input.h	2023-03-28 10:49:53.388511800 +0800
 +++ third-party-new/include/linux/linux/input.h	2023-04-03 14:59:02.390820400 +0800
