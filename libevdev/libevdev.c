@@ -44,7 +44,8 @@ struct slot_change_state {
 };
 
 static int sync_mt_state(struct libevdev *dev,
-			 struct slot_change_state *changes_out);
+			 struct slot_change_state changes_out[dev->num_slots]);
+
 static int
 update_key_state(struct libevdev *dev, const struct input_event *e);
 
@@ -910,7 +911,8 @@ sync_state(struct libevdev *dev)
 	bool want_mt_sync = false;
 	int last_reported_slot = 0;
 	struct slot_change_state changes[dev->num_slots > 0 ? dev->num_slots : 1];
-		memset(changes, 0, sizeof(changes));
+
+	memset(changes, 0, sizeof(changes));
 
 	 /* see section "Discarding events before synchronizing" in
 	  * libevdev/libevdev.h */
