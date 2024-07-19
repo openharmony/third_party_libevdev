@@ -3,7 +3,7 @@
    "Name":"openEuler:libevdev",
    "License":"MIT License",
    "License File":"COPYING",
-   "Version Number":"1.13.0",
+   "Version Number":"1.13.0-1.oe2203sp3",
    "Owner":"gaoshangqi1@huawei.com",
    "Upstream URL":"https://repo.openeuler.org/openEuler-22.03-LTS-SP3/source/Packages/libevdev-1.13.0-1.oe2203sp3.src.rpm",
    "Description": "libevdev is a wrapper library for evdev devices. it moves the common tasks when dealing with evdev devices into a library and provides a library interface to the callers, thus avoiding erroneous ioctls, et"
