@@ -864,6 +864,7 @@
 #define ABS_VOLUME		0x20
 
 #define ABS_MISC		0x28
+#define ABS_MT_MOVEFLAG		0x29
 
 /*
  * 0x2e is reserved and should not be used in input drivers.
