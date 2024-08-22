@@ -14,7 +14,15 @@ limitations under the License.
 diff -Naur old/include/event-names.h new/include/event-names.h
 --- old/include/event-names.h	2024-01-01 00:00:00.000000000 +0000
 +++ new/include/event-names.h	2024-01-01 00:00:00.000000000 +0000
-@@ -746,6 +746,7 @@
+@@ -63,6 +63,7 @@
+     [ABS_TOOL_WIDTH] = "ABS_TOOL_WIDTH",
+     [ABS_VOLUME] = "ABS_VOLUME",
+     [ABS_MISC] = "ABS_MISC",
++    [ABS_MT_MOVEFLAG] = "ABS_MT_MOVEFLAG",
+     [ABS_RESERVED] = "ABS_RESERVED",
+     [ABS_MT_SLOT] = "ABS_MT_SLOT",
+     [ABS_MT_TOUCH_MAJOR] = "ABS_MT_TOUCH_MAJOR",
+@@ -731,6 +732,7 @@
      [SW_MUTE_DEVICE] = "SW_MUTE_DEVICE",
      [SW_PEN_INSERTED] = "SW_PEN_INSERTED",
      [SW_MACHINE_COVER] = "SW_MACHINE_COVER",
@@ -22,10 +30,26 @@ diff -Naur old/include/event-names.h new/include/event-names.h
  };
  
  static const char * const ff_map[FF_MAX + 1] = {
+@@ -877,6 +879,7 @@
+ };
+ 
+ static const struct name_entry code_names[] = {
++    { .name = "ABS_MT_MOVEFLAG", .value = ABS_MT_MOVEFLAG },
+     { .name = "ABS_BRAKE", .value = ABS_BRAKE },
+     { .name = "ABS_DISTANCE", .value = ABS_DISTANCE },
+     { .name = "ABS_GAS", .value = ABS_GAS },
 diff -Naur old/include/linux/linux/input-event-codes.h new/include/linux/linux/input-event-codes.h
 --- old/include/linux/linux/input-event-codes.h	2024-01-01 00:00:00.000000000 +0000
 +++ new/include/linux/linux/input-event-codes.h	2024-01-01 00:00:00.000000000 +0000
-@@ -917,8 +917,9 @@
+@@ -843,6 +843,7 @@
+ #define ABS_VOLUME		0x20
+ 
+ #define ABS_MISC		0x28
++#define ABS_MT_MOVEFLAG		0x29
+ 
+ /*
+  * 0x2e is reserved and should not be used in input drivers.
+@@ -896,8 +897,9 @@
  #define SW_MUTE_DEVICE		0x0e  /* set = device disabled */
  #define SW_PEN_INSERTED		0x0f  /* set = pen inserted */
  #define SW_MACHINE_COVER	0x10  /* set = cover closed */

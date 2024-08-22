@@ -63,6 +63,7 @@ static const char * const abs_map[ABS_MAX + 1] = {
     [ABS_TOOL_WIDTH] = "ABS_TOOL_WIDTH",
     [ABS_VOLUME] = "ABS_VOLUME",
     [ABS_MISC] = "ABS_MISC",
+    [ABS_MT_MOVEFLAG] = "ABS_MT_MOVEFLAG",
     [ABS_RESERVED] = "ABS_RESERVED",
     [ABS_MT_SLOT] = "ABS_MT_SLOT",
     [ABS_MT_TOUCH_MAJOR] = "ABS_MT_TOUCH_MAJOR",
@@ -893,6 +894,7 @@ static const struct name_entry ev_names[] = {
 };
 
 static const struct name_entry code_names[] = {
+    { .name = "ABS_MT_MOVEFLAG", .value = ABS_MT_MOVEFLAG },
     { .name = "ABS_BRAKE", .value = ABS_BRAKE },
     { .name = "ABS_DISTANCE", .value = ABS_DISTANCE },
     { .name = "ABS_GAS", .value = ABS_GAS },
