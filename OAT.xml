@@ -66,6 +66,26 @@ Note:If the text contains special characters, please escape them according to th
         </policylist>
         <filefilterlist>
             <filefilter name="defaultFilter" desc="Files not to check">
+            <filteritem type="filepath" name="doc/html/sync_off.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/bc_s.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/sync_on.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/bdwn.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/tab_a.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/search/search_l.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/closed.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/tab_b.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/search/search_m.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/doc.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/tab_h.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/search/search_r.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/tab_s.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/folderclosed.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/folderopen.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/nav_f.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/nav_g.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/nav_h.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/open.png" desc="特殊图标"/>
+            <filteritem type="filepath" name="doc/html/splitbar.png" desc="特殊图标"/>
             </filefilter>
             <filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
                 <filteritem type="filename" name="README.OpenSource"/>
