@@ -16,7 +16,10 @@ config("libevdev_config") {
 }
 
 config("libevdev_public_config") {
-  include_dirs = [ "export_include" ]
+  include_dirs = [
+    "export_include",
+    "libevdev",
+  ]
 
   cflags = []
 }
