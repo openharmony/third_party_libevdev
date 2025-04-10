@@ -865,7 +865,7 @@
 #define ABS_HAND_FEATURE 0x21
 #define ABS_MISC		0x28
 #define ABS_MT_MOVEFLAG		0x29
-#define ABS_MT_ANGLE	0x2c
+#define ABS_MT_TWIST	0x2c
 
 /*
  * 0x2e is reserved and should not be used in input drivers.
