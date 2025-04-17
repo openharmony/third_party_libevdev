@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialization_20and_20setup_4',['Initialization and setup',['../group__init.html',1,'']]]
+  ['initialization_20and_20setup_0',['Initialization and setup',['../group__init.html',1,'']]]
 ];

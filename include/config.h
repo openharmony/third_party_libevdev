@@ -47,13 +47,13 @@
 #define PACKAGE "libevdev"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://bugs.freedesktop.org/enter_bug.cgi?product=libevdev"
+#define PACKAGE_BUGREPORT "https://gitlab.freedesktop.org/libevdev/libevdev/issues/"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "libevdev"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libevdev 1.13.0"
+#define PACKAGE_STRING "libevdev 1.13.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libevdev"
@@ -62,7 +62,7 @@
 #define PACKAGE_URL "http://freedesktop.org/wiki/Software/libevdev/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.13.0"
+#define PACKAGE_VERSION "1.13.1"
 
 /* Define to 1 if all of the C90 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
@@ -158,7 +158,7 @@
 
 
 /* Version number of package */
-#define VERSION "1.13.0"
+#define VERSION "1.13.1"
 
 /* Override for coverity */
 /* #undef _Float128 */

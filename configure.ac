@@ -7,8 +7,8 @@ AC_PREREQ([2.62])
 
 # change meson version too
 AC_INIT([libevdev],
-        [1.13.0],
-        [https://bugs.freedesktop.org/enter_bug.cgi?product=libevdev],
+        [1.13.1],
+        [https://gitlab.freedesktop.org/libevdev/libevdev/issues/],
         [libevdev],
         [http://freedesktop.org/wiki/Software/libevdev/])
 
@@ -59,12 +59,9 @@ AC_CHECK_LIB([m], [round])
 
 PKG_PROG_PKG_CONFIG()
 PKG_CHECK_MODULES(CHECK, [check >= 0.9.9], [HAVE_CHECK="yes"], [HAVE_CHECK="no"])
-if test "x$HAVE_CHECK" = "xyes"; then
-	AC_PATH_PROG(VALGRIND, [valgrind])
-else
+if test "x$HAVE_CHECK" != "xyes"; then
 	AC_MSG_WARN([check not found - skipping building unit tests])
 fi
-AM_CONDITIONAL(HAVE_VALGRIND, [test "x$VALGRIND" != "x"])
 AM_CONDITIONAL(ENABLE_RUNTIME_TESTS, [test "x$HAVE_CHECK" = "xyes"])
 AM_CONDITIONAL(ENABLE_STATIC_LINK_TEST, [test "x$enable_static" = "xyes"])
 
