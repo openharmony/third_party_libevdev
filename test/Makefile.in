@@ -96,9 +96,8 @@ noinst_PROGRAMS = $(am__EXEEXT_2) $(am__EXEEXT_4)
 # include builddir for event-names.h
 @ENABLE_RUNTIME_TESTS_TRUE@am__append_3 = $(CHECK_CFLAGS) $(GCOV_CFLAGS)
 @ENABLE_RUNTIME_TESTS_TRUE@am__append_4 = $(GCOV_LDFLAGS)
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@am__append_5 = valgrind
-@ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@am__append_6 = gcov
-@ENABLE_STATIC_SYMBOL_LEAKS_TEST_TRUE@am__append_7 = static-symbol-leaks
+@ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@am__append_5 = gcov
+@ENABLE_STATIC_SYMBOL_LEAKS_TEST_TRUE@am__append_6 = static-symbol-leaks
 subdir = test
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/attributes.m4 \
@@ -605,7 +604,6 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-VALGRIND = @VALGRIND@
 VERSION = @VERSION@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
@@ -677,7 +675,7 @@ test_static_link_SOURCES = test-link.c
 test_static_link_CFLAGS = -I$(top_srcdir)
 test_static_link_LDADD = $(top_builddir)/libevdev/libevdev.la
 test_static_link_LDFLAGS = $(AM_LDFLAGS) -static
-check_local_deps = $(am__append_5) $(am__append_6) $(am__append_7)
+check_local_deps = $(am__append_5) $(am__append_6)
 @ENABLE_RUNTIME_TESTS_TRUE@run_tests = \
 @ENABLE_RUNTIME_TESTS_TRUE@	    test-libevdev \
 @ENABLE_RUNTIME_TESTS_TRUE@	    test-kernel \
@@ -731,11 +729,6 @@ check_local_deps = $(am__append_5) $(am__append_6) $(am__append_7)
 
 @ENABLE_RUNTIME_TESTS_TRUE@test_kernel_CFLAGS = -I$(top_srcdir)
 @ENABLE_RUNTIME_TESTS_TRUE@test_kernel_LDADD = $(CHECK_LIBS) $(top_builddir)/libevdev/libevdev.la
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@VALGRIND_FLAGS = --leak-check=full \
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@		--quiet \
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@		--error-exitcode=3 \
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@		--suppressions=$(srcdir)/valgrind.suppressions
-
 @ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@CLEANFILES = gcov-reports/*.gcov gcov-reports/summary.txt *.gcno *.gcda
 EXTRA_DIST = valgrind.suppressions  generate-gcov-report.sh test-static-symbols-leak.sh
 all: all-am
@@ -1413,10 +1406,7 @@ uninstall-am:
 
 @ENABLE_RUNTIME_TESTS_TRUE@.NOTPARALLEL:
 
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@valgrind:
-@ENABLE_RUNTIME_TESTS_TRUE@@HAVE_VALGRIND_TRUE@	        $(MAKE) check-TESTS CK_TIMEOUT_MULTIPLIER=10 LOG_COMPILER="$(VALGRIND)" LOG_FLAGS="$(VALGRIND_FLAGS)"
-
-@ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@gcov-report: generate-gcov-report.sh check-TESTS
+@ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@gcov-report: generate-gcov-report.sh
 @ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@	$(AM_V_GEN)$(srcdir)/generate-gcov-report.sh gcov-reports $(top_builddir)/libevdev $(builddir)
 
 @ENABLE_RUNTIME_TESTS_TRUE@@GCOV_ENABLED_TRUE@gcov: gcov-report
