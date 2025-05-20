@@ -397,3 +397,354 @@
 #define BTN_MODE		0x13c
 #define BTN_THUMBL		0x13d
 #define BTN_THUMBR		0x13e
+
+#define BTN_DIGI		0x140
+#define BTN_TOOL_PEN		0x140
+#define BTN_TOOL_RUBBER		0x141
+#define BTN_TOOL_BRUSH		0x142
+#define BTN_TOOL_PENCIL		0x143
+#define BTN_TOOL_AIRBRUSH	0x144
+#define BTN_TOOL_FINGER		0x145
+#define BTN_TOOL_MOUSE		0x146
+#define BTN_TOOL_LENS		0x147
+#define BTN_TOOL_QUINTTAP	0x148	/* Five fingers on trackpad */
+#define BTN_STYLUS3		0x149
+#define BTN_TOUCH		0x14a
+#define BTN_STYLUS		0x14b
+#define BTN_STYLUS2		0x14c
+#define BTN_TOOL_DOUBLETAP	0x14d
+#define BTN_TOOL_TRIPLETAP	0x14e
+#define BTN_TOOL_QUADTAP	0x14f	/* Four fingers on trackpad */
+
+#define BTN_WHEEL		0x150
+#define BTN_GEAR_DOWN		0x150
+#define BTN_GEAR_UP		0x151
+
+#define KEY_OK			0x160
+#define KEY_SELECT		0x161
+#define KEY_GOTO		0x162
+#define KEY_CLEAR		0x163
+#define KEY_POWER2		0x164
+#define KEY_OPTION		0x165
+#define KEY_INFO		0x166	/* AL OEM Features/Tips/Tutorial */
+#define KEY_TIME		0x167
+#define KEY_VENDOR		0x168
+#define KEY_ARCHIVE		0x169
+#define KEY_PROGRAM		0x16a	/* Media Select Program Guide */
+#define KEY_CHANNEL		0x16b
+#define KEY_FAVORITES		0x16c
+#define KEY_EPG			0x16d
+#define KEY_PVR			0x16e	/* Media Select Home */
+#define KEY_MHP			0x16f
+#define KEY_LANGUAGE		0x170
+#define KEY_TITLE		0x171
+#define KEY_SUBTITLE		0x172
+#define KEY_ANGLE		0x173
+#define KEY_FULL_SCREEN		0x174	/* AC View Toggle */
+#define KEY_ZOOM		KEY_FULL_SCREEN
+#define KEY_MODE		0x175
+#define KEY_KEYBOARD		0x176
+#define KEY_ASPECT_RATIO	0x177	/* HUTRR37: Aspect */
+#define KEY_SCREEN		KEY_ASPECT_RATIO
+#define KEY_PC			0x178	/* Media Select Computer */
+#define KEY_TV			0x179	/* Media Select TV */
+#define KEY_TV2			0x17a	/* Media Select Cable */
+#define KEY_VCR			0x17b	/* Media Select VCR */
+#define KEY_VCR2		0x17c	/* VCR Plus */
+#define KEY_SAT			0x17d	/* Media Select Satellite */
+#define KEY_SAT2		0x17e
+#define KEY_CD			0x17f	/* Media Select CD */
+#define KEY_TAPE		0x180	/* Media Select Tape */
+#define KEY_RADIO		0x181
+#define KEY_TUNER		0x182	/* Media Select Tuner */
+#define KEY_PLAYER		0x183
+#define KEY_TEXT		0x184
+#define KEY_DVD			0x185	/* Media Select DVD */
+#define KEY_AUX			0x186
+#define KEY_MP3			0x187
+#define KEY_AUDIO		0x188	/* AL Audio Browser */
+#define KEY_VIDEO		0x189	/* AL Movie Browser */
+#define KEY_DIRECTORY		0x18a
+#define KEY_LIST		0x18b
+#define KEY_MEMO		0x18c	/* Media Select Messages */
+#define KEY_CALENDAR		0x18d
+#define KEY_RED			0x18e
+#define KEY_GREEN		0x18f
+#define KEY_YELLOW		0x190
+#define KEY_BLUE		0x191
+#define KEY_CHANNELUP		0x192	/* Channel Increment */
+#define KEY_CHANNELDOWN		0x193	/* Channel Decrement */
+#define KEY_FIRST		0x194
+#define KEY_LAST		0x195	/* Recall Last */
+#define KEY_AB			0x196
+#define KEY_NEXT		0x197
+#define KEY_RESTART		0x198
+#define KEY_SLOW		0x199
+#define KEY_SHUFFLE		0x19a
+#define KEY_BREAK		0x19b
+#define KEY_PREVIOUS		0x19c
+#define KEY_DIGITS		0x19d
+#define KEY_TEEN		0x19e
+#define KEY_TWEN		0x19f
+#define KEY_VIDEOPHONE		0x1a0	/* Media Select Video Phone */
+#define KEY_GAMES		0x1a1	/* Media Select Games */
+#define KEY_ZOOMIN		0x1a2	/* AC Zoom In */
+#define KEY_ZOOMOUT		0x1a3	/* AC Zoom Out */
+#define KEY_ZOOMRESET		0x1a4	/* AC Zoom */
+#define KEY_WORDPROCESSOR	0x1a5	/* AL Word Processor */
+#define KEY_EDITOR		0x1a6	/* AL Text Editor */
+#define KEY_SPREADSHEET		0x1a7	/* AL Spreadsheet */
+#define KEY_GRAPHICSEDITOR	0x1a8	/* AL Graphics Editor */
+#define KEY_PRESENTATION	0x1a9	/* AL Presentation App */
+#define KEY_DATABASE		0x1aa	/* AL Database App */
+#define KEY_NEWS		0x1ab	/* AL Newsreader */
+#define KEY_VOICEMAIL		0x1ac	/* AL Voicemail */
+#define KEY_ADDRESSBOOK		0x1ad	/* AL Contacts/Address Book */
+#define KEY_MESSENGER		0x1ae	/* AL Instant Messaging */
+#define KEY_DISPLAYTOGGLE	0x1af	/* Turn display (LCD) on and off */
+#define KEY_BRIGHTNESS_TOGGLE	KEY_DISPLAYTOGGLE
+#define KEY_SPELLCHECK		0x1b0   /* AL Spell Check */
+#define KEY_LOGOFF		0x1b1   /* AL Logoff */
+
+#define KEY_DOLLAR		0x1b2
+#define KEY_EURO		0x1b3
+
+#define KEY_FRAMEBACK		0x1b4	/* Consumer - transport controls */
+#define KEY_FRAMEFORWARD	0x1b5
+#define KEY_CONTEXT_MENU	0x1b6	/* GenDesc - system context menu */
+#define KEY_MEDIA_REPEAT	0x1b7	/* Consumer - transport control */
+#define KEY_10CHANNELSUP	0x1b8	/* 10 channels up (10+) */
+#define KEY_10CHANNELSDOWN	0x1b9	/* 10 channels down (10-) */
+#define KEY_IMAGES		0x1ba	/* AL Image Browser */
+#define KEY_NOTIFICATION_CENTER	0x1bc	/* Show/hide the notification center */
+#define KEY_PICKUP_PHONE	0x1bd	/* Answer incoming call */
+#define KEY_HANGUP_PHONE	0x1be	/* Decline incoming call */
+
+#define KEY_DEL_EOL		0x1c0
+#define KEY_DEL_EOS		0x1c1
+#define KEY_INS_LINE		0x1c2
+#define KEY_DEL_LINE		0x1c3
+
+#define KEY_FN			0x1d0
+#define KEY_FN_ESC		0x1d1
+#define KEY_FN_F1		0x1d2
+#define KEY_FN_F2		0x1d3
+#define KEY_FN_F3		0x1d4
+#define KEY_FN_F4		0x1d5
+#define KEY_FN_F5		0x1d6
+#define KEY_FN_F6		0x1d7
+#define KEY_FN_F7		0x1d8
+#define KEY_FN_F8		0x1d9
+#define KEY_FN_F9		0x1da
+#define KEY_FN_F10		0x1db
+#define KEY_FN_F11		0x1dc
+#define KEY_FN_F12		0x1dd
+#define KEY_FN_1		0x1de
+#define KEY_FN_2		0x1df
+#define KEY_FN_D		0x1e0
+#define KEY_FN_E		0x1e1
+#define KEY_FN_F		0x1e2
+#define KEY_FN_S		0x1e3
+#define KEY_FN_B		0x1e4
+#define KEY_FN_RIGHT_SHIFT	0x1e5
+
+#define KEY_BRL_DOT1		0x1f1
+#define KEY_BRL_DOT2		0x1f2
+#define KEY_BRL_DOT3		0x1f3
+#define KEY_BRL_DOT4		0x1f4
+#define KEY_BRL_DOT5		0x1f5
+#define KEY_BRL_DOT6		0x1f6
+#define KEY_BRL_DOT7		0x1f7
+#define KEY_BRL_DOT8		0x1f8
+#define KEY_BRL_DOT9		0x1f9
+#define KEY_BRL_DOT10		0x1fa
+
+#define KEY_NUMERIC_0		0x200	/* used by phones, remote controls, */
+#define KEY_NUMERIC_1		0x201	/* and other keypads */
+#define KEY_NUMERIC_2		0x202
+#define KEY_NUMERIC_3		0x203
+#define KEY_NUMERIC_4		0x204
+#define KEY_NUMERIC_5		0x205
+#define KEY_NUMERIC_6		0x206
+#define KEY_NUMERIC_7		0x207
+#define KEY_NUMERIC_8		0x208
+#define KEY_NUMERIC_9		0x209
+#define KEY_NUMERIC_STAR	0x20a
+#define KEY_NUMERIC_POUND	0x20b
+#define KEY_NUMERIC_A		0x20c	/* Phone key A - HUT Telephony 0xb9 */
+#define KEY_NUMERIC_B		0x20d
+#define KEY_NUMERIC_C		0x20e
+#define KEY_NUMERIC_D		0x20f
+
+#define KEY_CAMERA_FOCUS	0x210
+#define KEY_WPS_BUTTON		0x211	/* WiFi Protected Setup key */
+
+#define KEY_TOUCHPAD_TOGGLE	0x212	/* Request switch touchpad on or off */
+#define KEY_TOUCHPAD_ON		0x213
+#define KEY_TOUCHPAD_OFF	0x214
+
+#define KEY_CAMERA_ZOOMIN	0x215
+#define KEY_CAMERA_ZOOMOUT	0x216
+#define KEY_CAMERA_UP		0x217
+#define KEY_CAMERA_DOWN		0x218
+#define KEY_CAMERA_LEFT		0x219
+#define KEY_CAMERA_RIGHT	0x21a
+
+#define KEY_ATTENDANT_ON	0x21b
+#define KEY_ATTENDANT_OFF	0x21c
+#define KEY_ATTENDANT_TOGGLE	0x21d	/* Attendant call on or off */
+#define KEY_LIGHTS_TOGGLE	0x21e	/* Reading light on or off */
+
+#define BTN_DPAD_UP		0x220
+#define BTN_DPAD_DOWN		0x221
+#define BTN_DPAD_LEFT		0x222
+#define BTN_DPAD_RIGHT		0x223
+
+#define KEY_ALS_TOGGLE		0x230	/* Ambient light sensor */
+#define KEY_ROTATE_LOCK_TOGGLE	0x231	/* Display rotation lock */
+
+#define KEY_BUTTONCONFIG		0x240	/* AL Button Configuration */
+#define KEY_TASKMANAGER		0x241	/* AL Task/Project Manager */
+#define KEY_JOURNAL		0x242	/* AL Log/Journal/Timecard */
+#define KEY_CONTROLPANEL		0x243	/* AL Control Panel */
+#define KEY_APPSELECT		0x244	/* AL Select Task/Application */
+#define KEY_SCREENSAVER		0x245	/* AL Screen Saver */
+#define KEY_VOICECOMMAND		0x246	/* Listening Voice Command */
+#define KEY_ASSISTANT		0x247	/* AL Context-aware desktop assistant */
+#define KEY_KBD_LAYOUT_NEXT	0x248	/* AC Next Keyboard Layout Select */
+#define KEY_EMOJI_PICKER	0x249	/* Show/hide emoji picker (HUTRR101) */
+#define KEY_DICTATE		0x24a	/* Start or Stop Voice Dictation Session (HUTRR99) */
+#define KEY_CAMERA_ACCESS_ENABLE	0x24b	/* Enables programmatic access to camera devices. (HUTRR72) */
+#define KEY_CAMERA_ACCESS_DISABLE	0x24c	/* Disables programmatic access to camera devices. (HUTRR72) */
+#define KEY_CAMERA_ACCESS_TOGGLE	0x24d	/* Toggles the current state of the camera access control. (HUTRR72) */
+
+#define KEY_BRIGHTNESS_MIN		0x250	/* Set Brightness to Minimum */
+#define KEY_BRIGHTNESS_MAX		0x251	/* Set Brightness to Maximum */
+
+#define KEY_KBDINPUTASSIST_PREV		0x260
+#define KEY_KBDINPUTASSIST_NEXT		0x261
+#define KEY_KBDINPUTASSIST_PREVGROUP		0x262
+#define KEY_KBDINPUTASSIST_NEXTGROUP		0x263
+#define KEY_KBDINPUTASSIST_ACCEPT		0x264
+#define KEY_KBDINPUTASSIST_CANCEL		0x265
+
+/* Diagonal movement keys */
+#define KEY_RIGHT_UP			0x266
+#define KEY_RIGHT_DOWN			0x267
+#define KEY_LEFT_UP			0x268
+#define KEY_LEFT_DOWN			0x269
+
+#define KEY_ROOT_MENU			0x26a /* Show Device's Root Menu */
+/* Show Top Menu of the Media (e.g. DVD) */
+#define KEY_MEDIA_TOP_MENU		0x26b
+#define KEY_NUMERIC_11			0x26c
+#define KEY_NUMERIC_12			0x26d
+/*
+ * Toggle Audio Description: refers to an audio service that helps blind and
+ * visually impaired consumers understand the action in a program. Note: in
+ * some countries this is referred to as "Video Description".
+ */
+#define KEY_AUDIO_DESC			0x26e
+#define KEY_3D_MODE			0x26f
+#define KEY_NEXT_FAVORITE		0x270
+#define KEY_STOP_RECORD			0x271
+#define KEY_PAUSE_RECORD		0x272
+#define KEY_VOD				0x273 /* Video on Demand */
+#define KEY_UNMUTE			0x274
+#define KEY_FASTREVERSE			0x275
+#define KEY_SLOWREVERSE			0x276
+/*
+ * Control a data application associated with the currently viewed channel,
+ * e.g. teletext or data broadcast application (MHEG, MHP, HbbTV, etc.)
+ */
+#define KEY_DATA			0x277
+#define KEY_ONSCREEN_KEYBOARD		0x278
+/* Electronic privacy screen control */
+#define KEY_PRIVACY_SCREEN_TOGGLE	0x279
+
+/* Select an area of screen to be copied */
+#define KEY_SELECTIVE_SCREENSHOT	0x27a
+
+/* Move the focus to the next or previous user controllable element within a UI container */
+#define KEY_NEXT_ELEMENT               0x27b
+#define KEY_PREVIOUS_ELEMENT           0x27c
+
+/* Toggle Autopilot engagement */
+#define KEY_AUTOPILOT_ENGAGE_TOGGLE    0x27d
+
+/* Shortcut Keys */
+#define KEY_MARK_WAYPOINT              0x27e
+#define KEY_SOS                                0x27f
+#define KEY_NAV_CHART                  0x280
+#define KEY_FISHING_CHART              0x281
+#define KEY_SINGLE_RANGE_RADAR         0x282
+#define KEY_DUAL_RANGE_RADAR           0x283
+#define KEY_RADAR_OVERLAY              0x284
+#define KEY_TRADITIONAL_SONAR          0x285
+#define KEY_CLEARVU_SONAR              0x286
+#define KEY_SIDEVU_SONAR               0x287
+#define KEY_NAV_INFO                   0x288
+#define KEY_BRIGHTNESS_MENU            0x289
+
+/*
+ * Some keyboards have keys which do not have a defined meaning, these keys
+ * are intended to be programmed / bound to macros by the user. For most
+ * keyboards with these macro-keys the key-sequence to inject, or action to
+ * take, is all handled by software on the host side. So from the kernel's
+ * point of view these are just normal keys.
+ *
+ * The KEY_MACRO# codes below are intended for such keys, which may be labeled
+ * e.g. G1-G18, or S1 - S30. The KEY_MACRO# codes MUST NOT be used for keys
+ * where the marking on the key does indicate a defined meaning / purpose.
+ *
+ * The KEY_MACRO# codes MUST also NOT be used as fallback for when no existing
+ * KEY_FOO define matches the marking / purpose. In this case a new KEY_FOO
+ * define MUST be added.
+ */
+#define KEY_MACRO1			0x290
+#define KEY_MACRO2			0x291
+#define KEY_MACRO3			0x292
+#define KEY_MACRO4			0x293
+#define KEY_MACRO5			0x294
+#define KEY_MACRO6			0x295
+#define KEY_MACRO7			0x296
+#define KEY_MACRO8			0x297
+#define KEY_MACRO9			0x298
+#define KEY_MACRO10			0x299
+#define KEY_MACRO11			0x29a
+#define KEY_MACRO12			0x29b
+#define KEY_MACRO13			0x29c
+#define KEY_MACRO14			0x29d
+#define KEY_MACRO15			0x29e
+#define KEY_MACRO16			0x29f
+#define KEY_MACRO17			0x2a0
+#define KEY_MACRO18			0x2a1
+#define KEY_MACRO19			0x2a2
+#define KEY_MACRO20			0x2a3
+#define KEY_MACRO21			0x2a4
+#define KEY_MACRO22			0x2a5
+#define KEY_MACRO23			0x2a6
+#define KEY_MACRO24			0x2a7
+#define KEY_MACRO25			0x2a8
+#define KEY_MACRO26			0x2a9
+#define KEY_MACRO27			0x2aa
+#define KEY_MACRO28			0x2ab
+#define KEY_MACRO29			0x2ac
+#define KEY_MACRO30			0x2ad
+
+/*
+ * Some keyboards with the macro-keys described above have some extra keys
+ * for controlling the host-side software responsible for the macro handling:
+ * -A macro recording start/stop key. Note that not all keyboards which emit
+ *  KEY_MACRO_RECORD_START will also emit KEY_MACRO_RECORD_STOP if
+ *  KEY_MACRO_RECORD_STOP is not advertised, then KEY_MACRO_RECORD_START
+ *  should be interpreted as a recording start/stop toggle;
+ * -Keys for switching between different macro (pre)sets, either a key for
+ *  cycling through the configured presets or keys to directly select a preset.
+ */
+#define KEY_MACRO_RECORD_START		0x2b0
+#define KEY_MACRO_RECORD_STOP		0x2b1
+#define KEY_MACRO_PRESET_CYCLE		0x2b2
+#define KEY_MACRO_PRESET1		0x2b3
+#define KEY_MACRO_PRESET2		0x2b4
+#define KEY_MACRO_PRESET3		0x2b5
