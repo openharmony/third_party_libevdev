@@ -1,12 +1,14 @@
 import("//build/ohos.gni")
 
+gen_dst_dir = root_out_dir + "/diff_libevdev_mmi"
+
 ## Build libevdev.so {{{
 config("libevdev_config") {
   visibility = [ ":*" ]
 
   include_dirs = [
-    "libevdev",
-    "include",
+    "$gen_dst_dir/libevdev",
+    "$gen_dst_dir/include",
   ]
 
   cflags = [
@@ -17,25 +19,44 @@ config("libevdev_config") {
 
 config("libevdev_public_config") {
   include_dirs = [
-    "export_include",
-    "libevdev",
+    "$gen_dst_dir/export_include",
+    "$gen_dst_dir/libevdev",
   ]
 
   cflags = []
 }
 
-ohos_shared_library("libevdev") {
+ohos_source_set("patch_gen_libevdev-third-mmi") {
+  part_name = "libevdev"
+  subsystem_name = "thirdparty"
+
   sources = [
-    "libevdev/libevdev-names.c",
-    "libevdev/libevdev-uinput.c",
-    "libevdev/libevdev.c",
+    root_out_dir + "/diff_libevdev_mmi/libevdev/libevdev-names.c",
+    root_out_dir + "/diff_libevdev_mmi/libevdev/libevdev-uinput.c",
+    root_out_dir + "/diff_libevdev_mmi/libevdev/libevdev.c",
   ]
+
+  branch_protector_ret = "pac_ret"
+  sanitize = {
+    cfi = true
+    cfi_cross_dso = true
+    debug = false
+  }
+
+  configs = [ ":libevdev_config" ]
+  public_configs = [ ":libevdev_public_config" ]
+
+  deps = [ "patch:apply_patch" ]
+}
+
+ohos_shared_library("libevdev") {
+  sources = []
 
   configs = [ ":libevdev_config" ]
 
   public_configs = [ ":libevdev_public_config" ]
 
-  deps = []
+  deps = [":patch_gen_libevdev-third-mmi"]
 
   public_deps = []
 
