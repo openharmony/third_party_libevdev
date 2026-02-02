@@ -141,7 +141,7 @@ limitations under the License.
  #define UI_SET_PROPBIT _IOW(UINPUT_IOCTL_BASE, 110, int)
  #endif
  
-+static const uint64_t FDSAN_NEW_TAG = OXD002800;
++static const uint64_t FDSAN_NEW_TAG = 0xD002800;
 +
  static struct libevdev_uinput *
  alloc_uinput_device(const char *name)
