@@ -146,7 +146,7 @@ limitations under the License.
  static struct libevdev_uinput *
  alloc_uinput_device(const char *name)
  {
-@@ -261,17 +263,17 @@
+@@ -261,17 +263,17 @@ fetch_syspath_and_devnode(struct libevdev_uinput *uinput_dev)
  		fd = open(buf, O_RDONLY);
  		if (fd < 0)
  			continue;
@@ -167,7 +167,7 @@ limitations under the License.
  		if (len <= 0)
  			continue;
  
-@@ -382,7 +384,7 @@
+@@ -382,7 +384,7 @@ libevdev_uinput_create_from_device(const struct libevdev *dev, int fd, struct li
  		fd = open("/dev/uinput", O_RDWR|O_CLOEXEC);
  		if (fd < 0)
  			goto error;
@@ -176,7 +176,7 @@ limitations under the License.
  		new_device->fd_is_managed = 1;
  	} else if (fd < 0) {
  		log_bug(NULL, "Invalid fd %d\n", fd);
-@@ -429,7 +431,7 @@
+@@ -429,7 +431,7 @@ error:
  	rc = -errno;
  	libevdev_uinput_destroy(new_device);
  	if (fd != -1 && close_fd_on_error)
@@ -185,7 +185,7 @@ limitations under the License.
  	return rc;
  }
  
-@@ -442,7 +444,7 @@
+@@ -442,7 +444,7 @@ libevdev_uinput_destroy(struct libevdev_uinput *uinput_dev)
  	if (uinput_dev->fd >= 0) {
  		(void)ioctl(uinput_dev->fd, UI_DEV_DESTROY, NULL);
  		if (uinput_dev->fd_is_managed)
