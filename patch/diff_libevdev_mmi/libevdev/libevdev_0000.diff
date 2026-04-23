@@ -222,7 +222,7 @@ limitations under the License.
 
 --- a/libevdev/libevdev.c
 +++ b/libevdev/libevdev.c
-@@ -805,23 +805,34 @@ push_mt_sync_events(struct libevdev *dev,
+@@ -805,23 +805,38 @@
  	int rc;
  
  	for (int slot = 0; slot < dev->num_slots;  slot++) {
@@ -251,6 +251,10 @@ limitations under the License.
 +                                 * need to be synced despite no touch being active */
 +                                if (axis == ABS_MT_TRACKING_ID &&
 +                                    *slot_value(dev, slot, axis) == -1)
++					continue;
++
++				if ((axis == ABS_MT_POSITION_X || axis == ABS_MT_POSITION_Y) &&
++					changes[slot].state == TOUCH_STOPPED)
 +					continue;
 +
 +				if (!have_slot_event) {
